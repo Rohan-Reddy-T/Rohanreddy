@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Power BI Analytics - Rohan Reddy's Portfolio</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #808080; /* Mid-tone grey background */
+        color: #ffffff; /* White text for readability */
+        line-height: 1.6;
+    }
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    header {
+        background: #000000; /* Black background for header */
+        color: #ffffff; /* White text for contrast */
+        padding: 20px 0;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 2px; /* Spacing out letters for a cinematic feel */
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        background: #3d3d3d; /* Dark gray background for nav */
+        padding: 15px 0;
+        border-bottom: 2px solid #007bff; /* Blue border for a sharp look */
+    }
+    nav a, .dropdown > a {
+        color: #ffffff;
+        padding: 10px 25px;
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+        font-size: 18px;
+        text-align: center;
+        display: inline-block;
+        line-height: normal;
+        vertical-align: middle;
+    }
+    nav a:hover, nav a.active {
+        background: #007bff; /* James Bond style blue for hover */
+        color: #fff;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #3d3d3d; /* Same dark background for dropdown */
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5); /* Darker shadow */
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: #ffffff; /* White text */
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content a:hover {
+        background-color: #575757; /* Darker gray on hover */
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .content {
+        background: #707070; /* Slightly darker grey background for sections */
+        padding: 25px;
+        margin-top: 20px;
+        color: #ffffff; /* White text for readability */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for differentiation */
+        border-radius: 8px;
+    }
+    .experience-entry {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        border-left: 5px solid #007bff; /* Blue left border */
+        padding-left: 20px;
+    }
+    .experience-entry img {
+        width: auto;
+        height: 60px; /* Fixed height */
+        max-width: 80px; /* Maximum width */
+        margin-right: 20px;
+        object-fit: contain; /* Ensures image scales correctly */
+        background-color: #ffffff; /* White background for logos */
+        padding: 5px;
+        border-radius: 5px; /* Slightly rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+    .experience-entry div {
+        flex: 1;
+    }
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        background: #3d3d3d; /* Dark gray footer */
+        color: #ffffff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        border-top: 2px solid #007bff; /* Matching blue border */
+    }
+    .content-section {
+        background: #707070; /* Grey background for sections */
+        padding: 25px;
+        margin: 20px 0;
+        color: #ffffff; /* White text for readability */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for differentiation */
+        border-radius: 8px;
+    }
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+        }
+        .experience-entry {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .experience-entry img {
+            margin-bottom: 10px;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Rohan Reddy Thummalapalli</h1>
+        <p>Advanced Power BI Analytics</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Me</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#experience">Experience</a>
+        <div class="dropdown">
+            <a>Projects</a> <!-- No href here to prevent navigation -->
+            <div class="dropdown-content">
+                <a href="advanced-powerbi.html">Advanced Power BI Analytics</a>
+                <a href="powerbi-sql.html">Power BI and SQL Integration Projects</a>
+                <a href="sql-manipulation.html">SQL Data Manipulation and Analysis</a>
+                <a href="consulting.html">Strategic Consulting Initiatives</a>
+                <a href="finance-analysis.html">Financial Data Analysis</a>
+            </div>
+        </div>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="content">
+        <div class="project-entry">
+            <h4>SuperStore Sales Data Analysis and Visualization</h4>
+            <p>In this project, I performed a comprehensive analysis of the SuperStore sales dataset using Power BI. The dataset includes various dimensions such as order details, customer segmentation, geographic distribution, product categories, and financial metrics like sales, quantity, and profit. I developed an interactive dashboard that highlights key sales performance metrics, allowing for a deep dive into product profitability, customer behavior, and regional sales trends. This analysis provided valuable insights into the business's sales dynamics, identifying opportunities for optimizing sales strategies and improving customer satisfaction.</p>
+            <iframe title="Store Sales Forecast DB" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZGRlMzQ0MGItZDkyZC00NTNiLTkyM2QtNTJlY2ZhZjM5YzIwIiwidCI6IjE5MWRkNjBkLTA5MGEtNDQ1OS1hMDcxLWIwM2M4MGYzYWMzYiJ9" frameborder="0" allowFullScreen="true"></iframe>
+            <p><a href="https://docs.google.com/spreadsheets/d/1Dv4XDSlMTRsJNf6cNo5p2hC3YfG_xPVK/edit?usp=drive_link&ouid=117692668502659585581&rtpof=true&sd=true">Download Excel Data</a></p>
+        </div>
+        <div class="project-entry">
+            <h4>HR Analytics Dashboard for Employee Attrition and Workforce Analysis</h4>
+            <p>This project involved the analysis of HR analytics data to understand employee attrition and workforce dynamics using Power BI. The dataset includes a variety of employee metrics such as age, department, education, job role, satisfaction levels, work-life balance, and years at the company. By creating an interactive dashboard, I was able to visualize key factors contributing to employee attrition and identify trends across different demographics and job roles. This analysis provided actionable insights for improving employee retention strategies and optimizing workforce management, enabling a data-driven approach to HR decision-making.</p>
+            <iframe title="HR analytics DB" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMGFmYjgxZjktOTQ2Yy00ZDYzLWIxNTUtYzc2MTBmMTFkZTRkIiwidCI6IjE5MWRkNjBkLTA5MGEtNDQ1OS1hMDcxLWIwM2M4MGYzYWMzYiJ9" frameborder="0" allowFullScreen="true"></iframe>
+            <p><a href="https://drive.google.com/file/d/1rvlerX2equGJaTqK92r0bXgqLoa4xUOa/view?usp=drive_link">Download Excel Data</a></p>
+        </div>
+        <div class="project-entry">
+            <h4>Comprehensive Sales Analysis for a Retail Store</h4>
+            <p>In this project, I undertook a detailed sales analysis for a retail store using Power BI, leveraging multiple datasets that encompass order details, customer information, and product categories. The data includes specifics such as order amounts, profit margins, quantities sold, and payment modes, along with customer demographics including location and purchase dates. Through the creation of an interactive dashboard, I was able to visualize key sales metrics, analyze profit trends by product categories, and identify customer purchasing patterns. This analysis provided valuable insights into the store's sales performance, helping to inform strategies for inventory management, marketing, and customer engagement.</p>
+            <iframe title="Ecommerce Sales DB" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYzQyMTRiMWEtOTlhNy00YmIyLWFkYjktZWFlZGU2MzIxNGEzIiwidCI6IjE5MWRkNjBkLTA5MGEtNDQ1OS1hMDcxLWIwM2M4MGYzYWMzYiJ9" frameborder="0" allowFullScreen="true"></iframe>
+            <p><a href="https://docs.google.com/spreadsheets/d/10KR7sF_mU7-ZSSzMQqPcRePpvc2vkj5-/edit?usp=drive_link&ouid=117692668502659585581&rtpof=true&sd=true">Download Excel Data</a></p>
+        </div>
+        <div class="project-entry">
+            <h4>Customer Demographics and Financial Analysis of Bank data</h4>
+            <p>In this project, I was tasked with analyzing a dataset related to customer demographics and financial metrics using Power BI. The data included detailed information such as customer IDs, names, gender, age, region, job classification, date of account joining, and current account balances. I created an interactive dashboard that visualizes key metrics, such as customer distribution across different regions, age groups, and job classifications. Additionally, I performed an in-depth analysis of financial metrics like account balances segmented by demographics to uncover trends and insights. This project demonstrated my ability to transform raw data into actionable insights through effective data visualization and analysis.</p>
+            <iframe title="JS Bank Dashboard" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYzEyOTk5ZjctMmViOC00ZWRmLWIyMWEtM2E0M2VhNWViMjVlIiwidCI6IjE5MWRkNjBkLTA5MGEtNDQ1OS1hMDcxLWIwM2M4MGYzYWMzYiJ9&pageName=92c700f5b614c4484d2a" frameborder="0" allowFullScreen="true"></iframe>
+            <p><a href="https://docs.google.com/spreadsheets/d/1i5ef855YKI4z3jOajc3ymdU1rCFiJaZH/edit?usp=drive_link&ouid=117692668502659585581&rtpof=true&sd=true">Download Excel Data</a></p>
+        </div>
+        <div class="project-entry">
+            <h4>Comprehensive Sales and Order Analysis for JS Mart</h4>
+            <p>In this project, I conducted an in-depth analysis of JS Mart's sales and order data using Power BI. The dataset comprised detailed records of orders, including customer information, geographic distribution, product categories, and financial metrics such as sales, discounts, and profits. I developed a dynamic dashboard that visualizes key performance indicators across different segments and regions, enabling a clear understanding of sales trends, profitability, and customer behavior. This analysis provided actionable insights into the business's operational efficiency and market reach, highlighting opportunities for optimizing product offerings and sales strategies.</p>
+            <iframe title="JS Mart Dashboard" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYWQ1NzNmNGUtMzY4OC00MjFjLWE3ZTYtYmZmOTIyOGI2ZTQwIiwidCI6IjE5MWRkNjBkLTA5MGEtNDQ1OS1hMDcxLWIwM2M4MGYzYWMzYiJ9" frameborder="0" allowFullScreen="true"></iframe>
+            <p><a href="https://docs.google.com/spreadsheets/d/1dvI-DMvbPKCrVEmTQ8v2UDSoaIzHi4x7/edit?usp=drive_link&ouid=117692668502659585581&rtpof=true&sd=true">Download Excel Data</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright © 2024 Rohan Reddy</p>
+    </footer>
+</div>
+
+</body>
+</html>

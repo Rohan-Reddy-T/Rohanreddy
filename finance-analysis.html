@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Data Analysis - Rohan Reddy's Portfolio</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #808080; /* Mid-tone grey background */
+        color: #ffffff; /* White text for readability */
+        line-height: 1.6;
+    }
+    .container {
+        width: 90%;
+        max-width: 1400px; /* Increased maximum width for larger frame */
+        margin: 0 auto;
+    }
+    header {
+        background: #000000; /* Black background for header */
+        color: #ffffff; /* White text for contrast */
+        padding: 20px 0;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 2px; /* Spacing out letters for a cinematic feel */
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        background: #3d3d3d; /* Dark gray background for nav */
+        padding: 15px 0;
+        border-bottom: 2px solid #007bff; /* Blue border for a sharp look */
+    }
+    nav a, .dropdown > a {
+        color: #ffffff;
+        padding: 10px 25px;
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+        font-size: 18px;
+        text-align: center;
+        display: inline-block;
+        line-height: normal;
+        vertical-align: middle;
+    }
+    nav a:hover, nav a.active {
+        background: #007bff; /* James Bond style blue for hover */
+        color: #fff;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #3d3d3d; /* Same dark background for dropdown */
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5); /* Darker shadow */
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: #ffffff; /* White text */
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content a:hover {
+        background-color: #575757; /* Darker gray on hover */
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .content {
+        background: #707070; /* Slightly darker grey background for sections */
+        padding: 25px;
+        margin-top: 20px;
+        color: #ffffff; /* White text for readability */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for differentiation */
+        border-radius: 8px;
+    }
+    .project-entry {
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+    iframe {
+        width: 90%;
+        height: 550px; /* Increased height for larger frame */
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: 2px solid #007bff; /* Blue border for visual appeal */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    }
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        background: #3d3d3d; /* Dark gray footer */
+        color: #ffffff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        border-top: 2px solid #007bff; /* Matching blue border */
+    }
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Rohan Reddy Thummalapalli</h1>
+        <p>Financial Data Analysis</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Me</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#experience">Experience</a>
+        <div class="dropdown">
+            <a>Projects</a>
+            <div class="dropdown-content">
+                <a href="advanced-powerbi.html">Advanced Power BI Analytics</a>
+                <a href="powerbi-sql.html">Power BI and SQL Integration Projects</a>
+                <a href="sql-manipulation.html">SQL Data Manipulation and Analysis</a>
+                <a href="consulting.html">Strategic Consulting Initiatives</a>
+                <a href="finance-analysis.html">Financial Data Analysis</a>
+            </div>
+        </div>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="content-section">
+        <div class="project-entry">
+            <h4>Equity Research Analysis Using SQL and Power BI:</h4>
+            <p>In this project, I conducted a detailed equity research analysis using SQL for data manipulation and Power BI for visualization. The primary objective was to simulate the analysis performed by equity research analysts, providing valuable insights into market trends, company performance, and sectoral comparisons across a diverse set of financial data.</p>
+            <p>The dataset comprised various financial metrics, including market value, revenue, profit margins, and return on assets, among others, for companies across multiple sectors and industries. Using SQL, I extracted, cleaned, and analyzed the data to answer 25 critical financial questions. These questions covered a range of topics, from valuation metrics like P/E ratios to performance indicators such as revenue growth and profitability. The findings provided insights into the efficiency and financial health of companies, highlighting potential investment opportunities.</p>
+            <p>To complement the SQL analysis, I developed interactive dashboards in Power BI. These visualizations offered a clear and intuitive presentation of the data, making it easier to identify trends, outliers, and high-performing companies. The combination of SQL analysis and Power BI visualization provided a comprehensive overview of the financial landscape, aiding in informed decision-making for investors and stakeholders.</p>
+            <p>This project successfully demonstrated the application of advanced data analysis techniques in equity research, showcasing my ability to manage and analyze complex financial datasets to generate actionable insights.</p>
+            <iframe src="C:\My Portfolio\Finance Portfolio\Stock Data Analysis Project\Process Doc.pdf" title="Equity Research Analysis Report"></iframe>
+            <iframe title="Stock Visualization" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZDU1NjEwNjgtMWVhNy00ODdkLTgxNDctMGE3MTg0ZmE5YmNlIiwidCI6IjE5MWRkNjBkLTA5MGEtNDQ1OS1hMDcxLWIwM2M4MGYzYWMzYiJ9" frameborder="0" allowFullScreen="true"></iframe>
+            <p>Please find the SQL Analysis report and Datasets of this project here: <a href="https://drive.google.com/file/d/1XhcE-gRgN9yRoh8bO2JSJVrHz46JbJhe/view?usp=sharing">Download Excel Data</a> | <a href="https://drive.google.com/file/d/1i_LnSKFdtAbBXQ7qYNB-BMGVozMH9RWm/view?usp=sharing">Download Report</a></p>
+        </div>
+        <div class="project-entry">
+            <h4>Financial Data Analysis Using SQL and Power BI:</h4>
+            <p>In this project, I conducted an in-depth analysis of a comprehensive financial dataset using SQL for data management and Power BI for visualization. The dataset included multiple tables covering clients, accounts, transactions, investments, and market data, allowing for a detailed exploration of financial metrics and trends. The objective was to gain insights into client demographics, account activities, investment performance, and market fluctuations.</p>
+            <p>The analysis involved data cleaning and transformation, followed by the execution of complex SQL queries to extract meaningful insights. Key areas of focus included analyzing client revenue contributions, understanding transaction patterns, evaluating investment returns, and monitoring market data trends. The project culminated in the creation of interactive Power BI dashboards that provided a dynamic view of the financial data, enabling stakeholders to make informed decisions based on real-time insights.</p>
+            <p>The questions in this analysis were designed to explore various aspects of the financial dataset, ranging from client behavior to market trends. Basic queries focused on client demographics and account types, while more advanced queries delved into transaction analysis, investment performance, and market data trends. Each question was carefully crafted to provide actionable insights, such as identifying the highest revenue-generating clients, analyzing the performance of different investment types, and understanding the impact of market fluctuations on investments. The answers to these questions enabled a comprehensive understanding of the financial data, supporting strategic decision-making and optimizing financial operations.</p>
+            <iframe src="C:\My Portfolio\Finance Portfolio\Financial Data Analysis Project\Process Doc.pdf" title="Financial Analysis Report"></iframe>
+            <iframe title="Financial Data Dashboard" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZjM5MmNkNmMtMDEwNS00M2E0LTkyOTctOTc2NzQwNjdjY2QwIiwidCI6IjE5MWRkNjBkLTA5MGEtNDQ1OS1hMDcxLWIwM2M4MGYzYWMzYiJ9" frameborder="0" allowFullScreen="true"></iframe>
+            <p>Please find the SQL Analysis report and Datasets of this project here: <a href="https://drive.google.com/drive/folders/1MDA5nSdSlRhSG9TKWBbgh5B4FDzBzbAD?usp=sharing">Download Excel Data</a> | <a href="https://drive.google.com/file/d/1UHRCX0bMLDQl9EpsmacQ1XC2aosBiUWt/view?usp=sharing">Download Report</a></p>
+        </div>
+        <!-- Add more project entries as needed -->
+    </div>
+
+    <footer>
+        <p>Copyright © 2024 Rohan Reddy</p>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohan Reddy's Portfolio</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #808080; /* Mid-tone grey background */
+        color: #ffffff; /* White text for readability */
+        line-height: 1.6;
+    }
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    header {
+        background: #000000; /* Black background for header */
+        color: #ffffff; /* White text for contrast */
+        padding: 20px 0;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 2px; /* Spacing out letters for a cinematic feel */
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        background: #3d3d3d; /* Dark gray background for nav */
+        padding: 15px 0;
+        border-bottom: 2px solid #007bff; /* Blue border for a sharp look */
+    }
+    nav a, .dropdown > a {
+        color: #ffffff;
+        padding: 10px 25px;
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+        font-size: 18px;
+        text-align: center;
+        display: inline-block;
+        line-height: normal;
+        vertical-align: middle;
+    }
+    nav a:hover, nav a.active {
+        background: #007bff; /* James Bond style blue for hover */
+        color: #fff;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #3d3d3d; /* Same dark background for dropdown */
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5); /* Darker shadow */
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: #ffffff; /* White text */
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content a:hover {
+        background-color: #575757; /* Darker gray on hover */
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .content {
+        background: #707070; /* Slightly darker grey background for sections */
+        padding: 25px;
+        margin-top: 20px;
+        color: #ffffff; /* White text for readability */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for differentiation */
+        border-radius: 8px;
+    }
+    .experience-entry {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        border-left: 5px solid #007bff; /* Blue left border */
+        padding-left: 20px;
+    }
+    .experience-entry img {
+        width: auto;
+        height: 60px; /* Fixed height */
+        max-width: 80px; /* Maximum width */
+        margin-right: 20px;
+        object-fit: contain; /* Ensures image scales correctly */
+        background-color: #ffffff; /* White background for logos */
+        padding: 5px;
+        border-radius: 5px; /* Slightly rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+    .experience-entry div {
+        flex: 1;
+    }
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        background: #3d3d3d; /* Dark gray footer */
+        color: #ffffff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        border-top: 2px solid #007bff; /* Matching blue border */
+    }
+    .content-section {
+        background: #707070; /* Grey background for sections */
+        padding: 25px;
+        margin: 20px 0;
+        color: #ffffff; /* White text for readability */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for differentiation */
+        border-radius: 8px;
+    }
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+        }
+        .experience-entry {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .experience-entry img {
+            margin-bottom: 10px;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Rohan Reddy Thummalapalli</h1>
+        <p>Aspiring Analyst Professional | Data Visualization Expert</p>
+    </header>
+
+    <nav>
+        <a href="#about" class="active">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <div class="dropdown">
+            <a>Projects</a> <!-- No href here to prevent navigation -->
+            <div class="dropdown-content">
+                <a href="advanced-powerbi.html">Advanced Power BI Analytics</a>
+                <a href="powerbi-sql.html">Power BI and SQL Integration Projects</a>
+                <a href="sql-manipulation.html">SQL Data Manipulation and Analysis</a>
+                <a href="consulting.html">Strategic Consulting Initiatives</a>
+                <a href="finance-analysis.html">Financial Data Analysis</a>
+            </div>
+        </div>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="content-section" id="about">
+        <h2>About Me</h2>
+        <p>I am Rohan Reddy Thummalapalli, based in Hyderabad, India, specializing in data visualization and process improvement to enhance operational efficiency and strategic decision-making at an organizational level. With a robust analytical background and proficiency in tools like Power BI, SQL, and Tableau, I am committed to delivering innovative solutions and data-driven insights. I passionately pursue excellence in every project, aiming to transform complex data into actionable strategies that propel business growth.</p>
+    </div>
+
+    <div class="content-section" id="education">
+        <h2>Education</h2>
+        <p>Bachelor of Business Administration (Honours), CHRIST (Deemed to be University), Bangalore, India (2020 - 2023)</p>
+    </div>
+
+    <div class="content-section" id="experience">
+        <h2>Experience</h2>
+
+        <div class="experience-entry">
+            <img src="C:\My Portfolio\Website HTML codes\Impelsys_Logo.jpg" alt="Impelsys Logo">
+            <div>
+                <h3>Analyst at Impelsys (Aug 2023 – Present)</h3>
+                <p>At Impelsys in Bangalore, I play a critical role as an Analyst in the L & D team, managing the collection and analysis of learning and development data for over 700 employees each month. My expertise in developing and maintaining insightful Power BI dashboards has been instrumental in driving significant data-driven improvements within the company. My contributions extend to supporting the Products team by testing new learning management tools, ensuring high standards that align with client delivery expectations.</p>
+            </div>
+        </div>
+
+        <div class="experience-entry">
+            <img src="C:\My Portfolio\Website HTML codes\PWC logo.png" alt="PwC India Logo">
+            <div>
+                <h3>Business Human Capital Intern - Analytics at PwC India (Jun 2022 – Jul 2022)</h3>
+                <p>During my internship as a Business Human Capital Intern at PwC India, I collaborated on the Global People Survey Project, focusing on enhancing data-driven decision-making processes. I managed data of over 1000 employees across multiple offices, utilizing Workday for effective data management and report generation. My role also involved creating PowerPoint presentations, through which I delivered compelling insights to the leadership, significantly impacting strategic initiatives.</p>
+            </div>
+        </div>
+
+        <div class="experience-entry">
+            <img src="C:\My Portfolio\Website HTML codes\CBRE_Group_logo.png" alt="CBRE D&T Logo">
+            <div>
+                <h3>Analyst Intern (TA) at CBRE D&T (Jan 2022 – Mar 2022)</h3>
+                <p>As an Analyst intern in Talent Acquisition team at CBRE D&T, I was involved in analyzing candidate sourcing data from platforms like LinkedIn and Naukri. My efforts supported the TA team in streamlining recruitment processes and coordinating with the APAC team. My hands-on experience in data screening and process optimization contributed to refining recruitment strategies and enhancing operational efficiencies across the board.</p>
+            </div>
+        </div>
+
+        <div class="experience-entry">
+            <img src="C:\My Portfolio\Website HTML codes\CYIENT logo.jpeg" alt="Cyient Logo">
+            <div>
+                <h3>Intern (Project-Based) at Cyient Foundation, CSR branch of Cyient (Mar 2021 – Apr 2021)</h3>
+                <p>In my role as an Intern at Cyient Foundation, I was part of a team that delivered two impactful online presentations on communication and soft skills to students at a Government High School in Hyderabad. This initiative under Cyient’s CSR demonstrated my commitment to community service and my ability to leverage educational tools to foster skill development among students.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section" id="skills">
+        <h2>Skills</h2>
+        <p>Tableau, SQL, Power BI, SPSS IBM Statistics, MS Office Suite, Dashboards, Excel, PPT</p>
+    </div>
+
+    <div class="content-section" id="contact">
+        <h2>Contact</h2>
+        <p>Email: rohanreddydps@gmail.com | Phone: +91 8688347135 | <a href="https://www.linkedin.com/in/rohan-reddy-thummalapalli-8a8a60148/">LinkedIn</a></p>
+    </div>
+
+    <footer>
+        <p>Copyright © 2024 Rohan Reddy</p>
+    </footer>
+</div>
+
+</body>
+</html>

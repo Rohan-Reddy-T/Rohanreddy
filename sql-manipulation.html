@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SQL Data Manipulation and Analysis - Rohan Reddy's Portfolio</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #808080; /* Mid-tone grey background */
+        color: #ffffff; /* White text for readability */
+        line-height: 1.6;
+    }
+    .container {
+        width: 90%;
+        max-width: 1400px; /* Increased maximum width for larger frame */
+        margin: 0 auto;
+    }
+    header {
+        background: #000000; /* Black background for header */
+        color: #ffffff; /* White text for contrast */
+        padding: 20px 0;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 2px; /* Spacing out letters for a cinematic feel */
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        background: #3d3d3d; /* Dark gray background for nav */
+        padding: 15px 0;
+        border-bottom: 2px solid #007bff; /* Blue border for a sharp look */
+    }
+    nav a, .dropdown > a {
+        color: #ffffff;
+        padding: 10px 25px;
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+        font-size: 18px;
+        text-align: center;
+        display: inline-block;
+        line-height: normal;
+        vertical-align: middle;
+    }
+    nav a:hover, nav a.active {
+        background: #007bff; /* James Bond style blue for hover */
+        color: #fff;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #3d3d3d; /* Same dark background for dropdown */
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5); /* Darker shadow */
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: #ffffff; /* White text */
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content a:hover {
+        background-color: #575757; /* Darker gray on hover */
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .content {
+        background: #707070; /* Slightly darker grey background for sections */
+        padding: 25px;
+        margin-top: 20px;
+        color: #ffffff; /* White text for readability */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for differentiation */
+        border-radius: 8px;
+    }
+    h5 {
+        font-size: 1em; /* Adjust the size as needed */
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #ffffff; /* Ensures the text remains white */
+    }
+
+    h6 {
+        font-size: 1em; /* Slightly smaller than h5 */
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        color: #ffffff; /* Ensures the text remains white */
+    }
+
+    ul {
+        margin-left: 20px;
+        color: #ffffff; /* Ensures the text remains white */
+    }
+
+    li {
+        margin-bottom: 8px;
+        font-size: 1em; /* Normal list item font size */
+        color: #ffffff; /* Ensures the text remains white */
+    }
+    .project-entry {
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+    iframe {
+        width: 100%;
+        height: 700px; /* Increased height for larger frame */
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: 2px solid #007bff; /* Blue border for visual appeal */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    }
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        background: #3d3d3d; /* Dark gray footer */
+        color: #ffffff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        border-top: 2px solid #007bff; /* Matching blue border */
+    }
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+        }
+    }
+</style>
+
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Rohan Reddy Thummalapalli</h1>
+        <p>SQL Data Manipulation and Analysis</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Me</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#experience">Experience</a>
+        <div class="dropdown">
+            <a>Projects</a> <!-- No href here to prevent navigation -->
+            <div class="dropdown-content">
+                <a href="advanced-powerbi.html">Advanced Power BI Analytics</a>
+                <a href="powerbi-sql.html">Power BI and SQL Integration Projects</a>
+                <a href="sql-manipulation.html">SQL Data Manipulation and Analysis</a>
+                <a href="consulting.html">Strategic Consulting Initiatives</a>
+                <a href="finance-analysis.html">Financial Data Analysis</a>
+            </div>
+        </div>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="content-section">
+        <div class="project-entry">
+            <h4>SQL Project 1: Walmart Sales Data Analysis: </h4>
+            <p>This project explores the Walmart Sales data to understand top-performing branches and products, sales trends of different products, and customer behavior. The goal is to study how sales strategies can be improved and optimized. The dataset was obtained from the <a href="https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting">Kaggle Walmart Sales Forecasting Competition</a>.</p>
+            
+            <p>The major aim of this project is to gain insight into the sales data of Walmart to understand the different factors that affect sales across various branches.</p>
+        
+            <p>The dataset contains sales transactions from three different branches of Walmart, respectively located in Mandalay, Yangon, and Naypyitaw. The data contains 17 columns and 1000 rows:</p>
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Description</th>
+                        <th>Data Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>invoice_id</td>
+                        <td>Invoice of the sales made</td>
+                        <td>VARCHAR(30)</td>
+                    </tr>
+                    <tr>
+                        <td>branch</td>
+                        <td>Branch at which sales were made</td>
+                        <td>VARCHAR(5)</td>
+                    </tr>
+                    <tr>
+                        <td>city</td>
+                        <td>The location of the branch</td>
+                        <td>VARCHAR(30)</td>
+                    </tr>
+                    <tr>
+                        <td>customer_type</td>
+                        <td>The type of the customer</td>
+                        <td>VARCHAR(30)</td>
+                    </tr>
+                    <tr>
+                        <td>gender</td>
+                        <td>Gender of the customer making the purchase</td>
+                        <td>VARCHAR(10)</td>
+                    </tr>
+                    <tr>
+                        <td>product_line</td>
+                        <td>Product line of the product sold</td>
+                        <td>VARCHAR(100)</td>
+                    </tr>
+                    <tr>
+                        <td>unit_price</td>
+                        <td>The price of each product</td>
+                        <td>DECIMAL(10, 2)</td>
+                    </tr>
+                    <tr>
+                        <td>quantity</td>
+                        <td>The amount of the product sold</td>
+                        <td>INT</td>
+                    </tr>
+                    <tr>
+                        <td>VAT</td>
+                        <td>The amount of tax on the purchase</td>
+                        <td>FLOAT(6, 4)</td>
+                    </tr>
+                    <tr>
+                        <td>total</td>
+                        <td>The total cost of the purchase</td>
+                        <td>DECIMAL(10, 2)</td>
+                    </tr>
+                    <tr>
+                        <td>date</td>
+                        <td>The date on which the purchase was made</td>
+                        <td>DATE</td>
+                    </tr>
+                    <tr>
+                        <td>time</td>
+                        <td>The time at which the purchase was made</td>
+                        <td>TIMESTAMP</td>
+                    </tr>
+                    <tr>
+                        <td>payment_method</td>
+                        <td>The method of payment used</td>
+                        <td>VARCHAR(20)</td>
+                    </tr>
+                    <tr>
+                        <td>cogs</td>
+                        <td>Cost Of Goods Sold</td>
+                        <td>DECIMAL(10, 2)</td>
+                    </tr>
+                    <tr>
+                        <td>gross_margin_percentage</td>
+                        <td>Gross margin percentage</td>
+                        <td>FLOAT(11, 9)</td>
+                    </tr>
+                    <tr>
+                        <td>gross_income</td>
+                        <td>Gross Income</td>
+                        <td>DECIMAL(10, 2)</td>
+                    </tr>
+                    <tr>
+                        <td>rating</td>
+                        <td>Customer rating</td>
+                        <td>FLOAT(2, 1)</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <h5>Analysis List:</h5>
+            <ul>
+                <li><strong>Product Analysis:</strong> Conduct analysis to understand the different product lines, identify the best-performing products, and find areas needing improvement.</li>
+                <li><strong>Sales Analysis:</strong> Analyze sales trends to evaluate the effectiveness of sales strategies and identify necessary modifications.</li>
+                <li><strong>Customer Analysis:</strong> Analyze customer segments, purchase trends, and the profitability of each segment.</li>
+            </ul>
+        
+            <h5>Approach Used:</h5>
+            <ul>
+                <li><strong>Data Wrangling:</strong> Inspection and cleaning of data to handle NULL and missing values.</li>
+                <li>Build a database, create tables, and insert data.</li>
+                <li>Select columns with null values (if any) and handle them appropriately.</li>
+            </ul>
+        
+            <h5>Business Questions To Answer:</h5>
+            <h6>Generic Questions:</h6>
+            <ul>
+                <li>How many unique cities does the data have?</li>
+                <li>In which city is each branch located?</li>
+            </ul>
+            
+            <h6>Product Questions:</h6>
+            <ul>
+                <li>How many unique product lines does the data have?</li>
+                <li>What is the most common payment method?</li>
+                <li>What is the best-selling product line?</li>
+                <li>What is the total revenue by month?</li>
+                <li>Which month had the largest COGS?</li>
+                <li>Which product line generated the most revenue?</li>
+                <li>Which city generated the most revenue?</li>
+                <li>Which product line had the largest VAT?</li>
+                <li>Which branch sold more products than the average number sold?</li>
+                <li>What is the most common product line by gender?</li>
+                <li>What is the average rating of each product line?</li>
+            </ul>
+            
+            <h6>Sales Questions:</h6>
+            <ul>
+                <li>Number of sales made at different times of the day per weekday?</li>
+                <li>Which customer type generates the most revenue?</li>
+                <li>Which city has the largest tax percentage (VAT)?</li>
+                <li>Which customer type pays the most VAT?</li>
+            </ul>
+            
+            <h6>Customer Questions:</h6>
+            <ul>
+                <li>How many unique customer types are there?</li>
+                <li>How many unique payment methods are there?</li>
+                <li>What is the most common customer type?</li>
+                <li>Which customer type buys the most?</li>
+                <li>What is the gender distribution among customers?</li>
+                <li>What is the gender distribution per branch?</li>
+                <li>What time of day receives the most ratings?</li>
+                <li>Which day of the week has the best average ratings?</li>
+                <li>Which branch has the best average ratings by day of the week?</li>
+            </ul>
+        
+            <iframe src="C:\My Portfolio\SQL Portfolio\Walmart Sales Project\SQL query details.pdf" title="SQL Query Analysis Report"></iframe>
+            <p>Please find the SQL Query report and Datasets of this project here: <a href="https://drive.google.com/file/d/1v_bXABXwi9QJOKwObPAeDhUCi3zyX6sO/view?usp=sharing">Download Excel Data</a> | <a href="https://drive.google.com/file/d/1EWrejGf9AE_SLodmMwtbhdumQeU9nlmd/view?usp=sharing">Download SQL Query Report</a></p>
+        </div>
+        
+        <div class="project-entry">
+            <h4>SQL Project 2: Comprehensive SQL-Based Data Analysis for a Music Store: </h4>
+            <p>In this project, I conducted an extensive analysis of a music store's dataset using SQL, focusing on key business metrics and customer behaviors. The project involved solving various query-based challenges, ranging from identifying the senior-most employee to determining the best customers and most profitable cities. Through SQL queries, I extracted insights into customer spending habits, artist popularity, and genre preferences across different countries. The analysis included identifying the top rock music listeners, determining the most popular music genres by country, and evaluating customer expenditures on artists. This project showcases my ability to handle complex data sets, generate actionable insights, and support business decisions using advanced SQL techniques.</p>
+            <p>The questions in this analysis are designed to uncover critical insights from the music store's dataset through SQL queries. The analysis begins with basic queries, such as identifying the senior-most employee and pinpointing the countries with the highest invoice counts. As the complexity increases, the focus shifts to understanding customer behavior—like finding the best customer and the city with the highest sales, which could be targeted for promotional events.</p>
+            <p>In the moderate section, the queries delve into customer preferences, such as identifying all Rock music listeners and the top rock bands by track count. The advanced queries challenge deeper analysis, including determining the total amount spent by customers on specific artists, identifying the most popular music genre in each country, and finding the top-spending customers by country.</p>
+            <p>These questions collectively aim to provide a comprehensive understanding of the music store's operational metrics and customer dynamics, supporting strategic decisions and targeted marketing efforts.</p>
+            <iframe src="C:\My Portfolio\SQL Portfolio\Music Store Project\SQL query details.pdf" title="SQL Query Analysis Report"></iframe>
+            <p>Please find the SQL Query report and Datasets of this project here: <a href="https://drive.google.com/drive/folders/14p8-v3ZSSBB9UPteaA_6qHxGfx1Pr91o?usp=sharing">Download Excel Data</a> | <a href="https://drive.google.com/file/d/11_f7tCEXcFGP8d5LrfcuGiwG2_UenWRB/view?usp=sharing">Download SQL Query Report</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright © 2024 Rohan Reddy</p>
+    </footer>
+</div>
+
+</body>
+</html>
